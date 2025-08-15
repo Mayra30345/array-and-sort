@@ -1,0 +1,28 @@
+<html>
+    <head> <title> MAP </title></head>
+    <body>
+        <p id="product_value0"></p>
+        <p id="product_value1"></p>
+        <p id="product_value2"></p>
+        <button onclick="ascending()"> Ascending order </button>
+        <button onclick="descending()"> Descending order </button>
+        <script>
+            var numbers=[25,12,19,94];
+            function myfunction(num){
+                return num*50;
+            }
+            var newarray=[]
+            var newarray = numbers.map(myfunction);
+            document.getElementById("product_value").innerHTML= "The mapped values are:"+ newarray;
+            function ascending(){
+                newarray.sort(function(a,b){ return a-b});
+                document.getElementById("product_value1").innerHTML = "The ascending order of mapped values are:" + newarray;
+            }
+            function descending() {
+                    newarray.sort(function (a, b) { return b - a });
+                    document.getElementById("product_value2").innerHTML = "The descending order of mapped values are:" + newarray;
+            }
+        </script>
+
+    </body>
+</html>
